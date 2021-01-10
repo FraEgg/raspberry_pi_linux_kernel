@@ -1451,7 +1451,27 @@ CONFIG_NET_PKTGEN=m
 # end of Network testing
 # end of Networking options
 
-# CONFIG_HAMRADIO is not set
+CONFIG_HAMRADIO=y
+
+#
+# Packet Radio protocols
+#
+CONFIG_AX25=m
+CONFIG_AX25_DAMA_SLAVE=y
+CONFIG_NETROM=m
+CONFIG_ROSE=m
+
+#
+# AX.25 network device drivers
+#
+CONFIG_MKISS=m
+CONFIG_6PACK=m
+CONFIG_BPQETHER=m
+CONFIG_BAYCOM_SER_FDX=m
+CONFIG_BAYCOM_SER_HDX=m
+CONFIG_YAM=m
+# end of AX.25 network device drivers
+
 CONFIG_CAN=m
 CONFIG_CAN_RAW=m
 CONFIG_CAN_BCM=m
@@ -1602,7 +1622,18 @@ CONFIG_NET_9P=m
 # CONFIG_NET_9P_DEBUG is not set
 # CONFIG_CAIF is not set
 # CONFIG_CEPH_LIB is not set
-# CONFIG_NFC is not set
+CONFIG_NFC=m
+# CONFIG_NFC_DIGITAL is not set
+# CONFIG_NFC_NCI is not set
+# CONFIG_NFC_HCI is not set
+
+#
+# Near Field Communication (NFC) devices
+#
+# CONFIG_NFC_PN533_USB is not set
+# CONFIG_NFC_PN533_I2C is not set
+# end of Near Field Communication (NFC) devices
+
 # CONFIG_PSAMPLE is not set
 # CONFIG_NET_IFE is not set
 # CONFIG_LWTUNNEL is not set
@@ -4490,7 +4521,7 @@ CONFIG_USB_DEFAULT_PERSIST=y
 # CONFIG_USB_OTG_BLACKLIST_HUB is not set
 # CONFIG_USB_LEDS_TRIGGER_USBPORT is not set
 CONFIG_USB_AUTOSUSPEND_DELAY=2
-# CONFIG_USB_MON is not set
+CONFIG_USB_MON=m
 
 #
 # USB Host Controller Drivers
@@ -4519,7 +4550,7 @@ CONFIG_USB_DWCOTG=y
 # USB Device Class drivers
 #
 CONFIG_USB_ACM=m
-# CONFIG_USB_PRINTER is not set
+CONFIG_USB_PRINTER=m
 CONFIG_USB_WDM=m
 CONFIG_USB_TMC=m
 
